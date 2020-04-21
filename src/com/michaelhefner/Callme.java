@@ -1,7 +1,7 @@
 package com.michaelhefner;
 
 public class Callme {
-    void call(String message){
+    synchronized void call(String message){
         System.out.print("[" + message);
         try {
             Thread.sleep(1000);
