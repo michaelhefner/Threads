@@ -15,9 +15,12 @@ public class CurrentThreadDemo {
         }catch (InterruptedException e){
             System.out.println("Main thread interrupted");
         }
-        NewThread newThread = new NewThread();
+        NewThread firstThread = new NewThread();
+        NewThread secondThread = new NewThread();
+        secondThread.setName("Second Child Thread");
 
-        newThread.thread.start();
+        firstThread.thread.start();
+        secondThread.thread.start();
 
         try {
             for (int i = 5; i > 0; i--){
